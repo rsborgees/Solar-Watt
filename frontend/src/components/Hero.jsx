@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { whatsappLink } from '../whatsapp'
-import imgSunset from '../assets/img1.png'
-import imgAerial from '../assets/img2.png'
-import imgRoof from '../assets/img3.png'
+import { trackEvent } from '../analytics'
+import imgSunset from '../assets/img1.webp'
+import imgAerial from '../assets/img2.webp'
+import imgRoof from '../assets/img3.webp'
 
 function SavingsReadout() {
   const [prefersReduced] = useState(
@@ -32,28 +33,32 @@ export default function Hero() {
   return (
     <section id="topo" className="hero">
       <div className="hero-text">
-        <span className="hero-location">Feira de Santana &amp; região — BA</span>
+        <span className="hero-location">Recôncavo &amp; região — Bahia</span>
         <h1>
           Energia solar<br />
-          que cabe no<br />
-          <em>seu bolso.</em>
+          feita para a<br />
+          <em>realidade da Bahia.</em>
         </h1>
         <p className="hero-lede">
-          Projetamos e instalamos sistemas fotovoltaicos para casas e
-          empresas. Você começa a economizar no primeiro mês após a
-          instalação.
+          Simule sua economia, entenda cada etapa da instalação e encontre o
+          caminho de financiamento mais adequado para o seu projeto.
         </p>
         <div className="hero-actions">
           <a
             className="btn btn-primary"
+            href="#simular"
+            onClick={() => trackEvent('simulator_cta_click', { location: 'hero' })}
+          >
+            Calcular minha economia
+          </a>
+          <a
+            className="btn btn-ghost"
             href={whatsappLink('Olá! Gostaria de solicitar um orçamento de energia solar.')}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent('whatsapp_click', { location: 'hero' })}
           >
-            Pedir orçamento gratuito
-          </a>
-          <a className="btn btn-text" href="#sobre">
-            Conheça a empresa →
+            Falar com especialista
           </a>
         </div>
       </div>

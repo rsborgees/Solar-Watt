@@ -1,0 +1,26 @@
+import jwt from 'jsonwebtoken'
+
+const SECRET = process.env.JWT_SECRET
+const EXPIRES_IN = '7d'
+
+export function signToken(client) {
+  return jwt.sign({ sub: client.id, isAdmin: client.is_admin }, SECRET, { expiresIn: EXPIRES_IN })
+}
+
+export function requireAuth(req, res, next) {
+  const header = req.headers.authorization || ''
+  const token = header.startsWith('Bearer ') ? header.slice(7) : null
+  if (!token) return res.status(401).json({ error: 'Não autenticado.' })
+
+  try {
+    req.auth = jwt.verify(token, SECRET)
+    next()
+  } catch {
+    res.status(401).json({ error: 'Sessão inválida ou expirada.' })
+  }
+}
+
+export function requireAdmin(req, res, next) {
+  if (!req.auth?.isAdmin) return res.status(403).json({ error: 'Acesso restrito ao administrador.' })
+  next()
+}

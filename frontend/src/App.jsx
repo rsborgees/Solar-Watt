@@ -1,29 +1,29 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Services from './components/Services'
-import HowItWorks from './components/HowItWorks'
-import Benefits from './components/Benefits'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import WhatsAppFloat from './components/WhatsAppFloat'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import FinanciamentoPage from './pages/FinanciamentoPage'
+import ObrasPage from './pages/ObrasPage'
+import AprendaPage from './pages/AprendaPage'
+import PortalLoginPage from './pages/portal/PortalLoginPage'
+import ClientDashboardPage from './pages/portal/ClientDashboardPage'
+import AdminDashboardPage from './pages/portal/AdminDashboardPage'
 import './App.css'
 
 function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <HowItWorks />
-        <Benefits />
-        <Contact />
-      </main>
-      <Footer />
-      <WhatsAppFloat />
-    </>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="financiamento" element={<FinanciamentoPage />} />
+          <Route path="obras" element={<ObrasPage />} />
+          <Route path="aprenda" element={<AprendaPage />} />
+          <Route path="portal" element={<PortalLoginPage />} />
+          <Route path="portal/painel" element={<ClientDashboardPage />} />
+          <Route path="portal/admin" element={<AdminDashboardPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

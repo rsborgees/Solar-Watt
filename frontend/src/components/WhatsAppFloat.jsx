@@ -1,4 +1,5 @@
 import { whatsappLink } from '../whatsapp'
+import { trackEvent } from '../analytics'
 
 export default function WhatsAppFloat() {
   return (
@@ -8,6 +9,7 @@ export default function WhatsAppFloat() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
+      onClick={() => trackEvent('whatsapp_click', { location: 'float' })}
     >
       <span className="whatsapp-ping" aria-hidden="true" />
       <svg viewBox="0 0 32 32" aria-hidden="true">

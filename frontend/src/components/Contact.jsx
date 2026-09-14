@@ -1,5 +1,6 @@
 import { useInView } from '../useInView'
 import { whatsappLink } from '../whatsapp'
+import { trackEvent } from '../analytics'
 
 export default function Contact() {
   const [ref, inView] = useInView(0.15)
@@ -22,6 +23,7 @@ export default function Contact() {
             )}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent('whatsapp_click', { location: 'contact' })}
           >
             Falar no WhatsApp
           </a>
@@ -36,6 +38,7 @@ export default function Contact() {
               )}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent('whatsapp_click', { location: 'contact_phone' })}
             >
               (75) 99958-3373
             </a>

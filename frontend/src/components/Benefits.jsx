@@ -2,19 +2,19 @@ import { useInView } from '../useInView'
 
 const BENEFITS = [
   {
-    value: '95%',
+    value: 'Até 95%',
     label: 'de redução',
-    desc: 'na conta de luz dos nossos clientes',
+    desc: 'na conta de luz, variando conforme consumo e dimensionamento',
   },
   {
     value: '25',
     label: 'anos de garantia',
-    desc: 'dos painéis fotovoltaicos instalados',
+    desc: 'de fábrica dos painéis fotovoltaicos, conforme fabricante',
   },
   {
-    value: '+8%',
-    label: 'valorização',
-    desc: 'do imóvel com sistema fotovoltaico',
+    value: 'Valorização',
+    label: 'do imóvel',
+    desc: 'sistemas fotovoltaicos tendem a agregar valor, segundo o mercado',
   },
   {
     value: 'Zero',

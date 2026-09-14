@@ -14,11 +14,25 @@ export default function About() {
 
         <div className={`about-right reveal-right ${cls}`}>
           <p className="about-lead">
-            Somos especializados em sistemas fotovoltaicos para residências e
-            empresas em Feira de Santana e região. Cuidamos de tudo: projeto,
-            instalação e homologação junto à concessionária.
+            Somos especializados em sistemas fotovoltaicos com sede no
+            Recôncavo Baiano e atuação em Feira de Santana e outras cidades da
+            Bahia onde temos capacidade operacional confirmada. Cuidamos de
+            tudo: projeto, instalação e homologação junto à distribuidora.
+          </p>
+          <p className="about-lead">
+            A Bahia tem 417 municípios — tratamos isso como o tamanho do
+            mercado que enxergamos, não como uma promessa de atendimento
+            imediato em todo o estado. Priorizamos as regiões onde já temos
+            obras ou capacidade operacional confirmada.
           </p>
           <ul className="about-facts">
+            <li>
+              <span className="fact-key">Experiência</span>
+              <span className="fact-val">
+                Mais de 800 sistemas acompanhados ao longo da nossa trajetória,
+                sujeito à confirmação do inventário comercial
+              </span>
+            </li>
             <li>
               <span className="fact-key">Equipamentos</span>
               <span className="fact-val">
@@ -36,11 +50,18 @@ export default function About() {
             <li>
               <span className="fact-key">Suporte</span>
               <span className="fact-val">
-                Instalação, homologação na concessionária e pós-venda
+                Instalação, homologação junto à distribuidora e pós-venda
                 completos
               </span>
             </li>
           </ul>
+
+          <div className="about-aside">
+            <strong>Nossa sede e a energia que praticamos.</strong> Estamos
+            transformando nossa própria sede em um espaço que reflete o que
+            instalamos para os nossos clientes — preferimos mostrar o processo
+            real a antecipar uma obra que ainda não está concluída.
+          </div>
         </div>
       </div>
     </section>

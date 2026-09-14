@@ -18,6 +18,14 @@ const SERVICES = [
     title: 'Expansão de sistema existente',
     text: 'Ampliação de instalações já existentes para acompanhar o crescimento do consumo ou aumentar a capacidade de geração.',
   },
+  {
+    title: 'Energia solar rural',
+    text: 'Sistemas para propriedades rurais, incluindo bombeamento, irrigação e galpões, dimensionados conforme a realidade do imóvel e a distribuidora responsável.',
+  },
+  {
+    title: 'Orientação sobre financiamento',
+    text: 'Ajudamos a entender as opções de financiamento disponíveis, com destaque para o FNE Sol do Banco do Nordeste, e a organizar a documentação necessária.',
+  },
 ]
 
 export default function Services() {

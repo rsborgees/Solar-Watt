@@ -15,6 +15,22 @@
       content="Solar Eleven Watt — instalação de energia solar fotovoltaica residencial e comercial em Feira de Santana e região. Economize até 95% na conta de luz."
     />
     <title>Solar Eleven Watt — Energia solar em Feira de Santana</title>
+    <script type="text/javascript">
+      // Decodes the path 404.html redirected here (see public/404.html)
+      // back into a real URL before React Router mounts.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
+        }
+      })(window.location)
+    </script>
   </head>
   <body>
     <div id="root"></div>

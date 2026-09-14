@@ -1,0 +1,496 @@
+Briefing de reestruturação do site Solar
+Eleven Watt
+Documento de direção de conteúdo, arquitetura e requisitos funcionais
+Base analisada: áudios enviados, imagem do cronograma de obra, site atual e referências
+H3 Solar e EletroBidu.
+Marca de transição: manter inicialmente Solar Eleven Watt e a identidade visual
+existente, mas construir o front-end com tokens de cor, tipografia e componentes que
+permitam uma futura troca de nome e identidade sem refazer a estrutura.
+1. Direção executiva
+A nova versão do site deve deixar de ser apenas uma página institucional com botão de
+WhatsApp e se tornar uma plataforma regional de educação, simulação, financiamento
+e prova social em energia solar na Bahia. O visitante deve conseguir entender o básico
+sobre o sistema fotovoltaico, estimar seu potencial de economia, conhecer as etapas da
+obra e identificar caminhos de financiamento antes de conversar com a equipe.
+O posicionamento prioritário é regional: a empresa está sediada no Recôncavo, atua em
+Feira de Santana e já possui obras em diferentes pontos da Bahia. Portanto, o site não deve
+parecer uma empresa genérica de atuação nacional. A mensagem precisa transmitir
+domínio da realidade baiana, presença local e capacidade de atender tanto residências
+quanto empresas, propriedades rurais e projetos de maior porte.
+O Banco do Nordeste deve receber o maior destaque entre as opções de financiamento. Os
+demais nomes informados pelo cliente devem aparecer em uma área organizada de
+alternativas, sempre com a distinção entre banco, instituição cooperativa, agente
+financeiro, plataforma de crédito ou linha de financiamento. Nenhum logo ou afirmação de
+parceria deve ser publicado sem confirmação comercial e documental.
+2. O que foi extraído dos áudios
+Os áudios reforçam que o site precisa ser pensado para a realidade da Bahia e para pessoas
+que ainda não sabem formular suas dúvidas. A proposta não é simplesmente levar o
+usuário a um orçamento; é prepará-lo com conteúdo útil para que ele chegue ao
+atendimento mais informado e com maior confiança.
+Foi citada a abrangência dos 417 municípios baianos. A comunicação deve utilizar essa
+dimensão como contexto de mercado, sem afirmar atendimento imediato em todos os
+municípios. O texto deve priorizar as localidades onde já existem obras ou capacidade
+operacional confirmada.
+A empresa foi descrita como sediada no Recôncavo, com atuação em Feira de Santana,
+Valença, Cruz das Almas, Itabuna, Salvador, Linha Verde e outras cidades. Essa presença
+deve ser convertida em um mapa, uma galeria filtrável ou uma lista de regiões atendidas,
+desde que os municípios e as obras sejam validados antes da publicação.
+Também foi mencionado um acervo superior a 800 sistemas que ainda não está
+catalogado de maneira adequada. Esse número pode funcionar como prova de experiência,
+mas precisa ser conferido, datado e acompanhado de uma definição clara, como
+“sistemas instalados”, “projetos executados” ou “obras acompanhadas”. Enquanto
+não houver validação, o site deve usar a fórmula “mais de 800 sistemas, sujeito à
+confirmação do inventário comercial”.
+Os áudios defendem uma área de cálculo, uma explicação simples sobre a taxação e um
+FAQ capaz de antecipar perguntas de leigos. Também destacam a importância de explicar o
+cronograma de obra, publicar depoimentos de clientes e usar o site como base para tráfego
+orgânico de qualidade.
+O foco na Bahia deve ser tratado como requisito central do produto, e não apenas como
+uma menção geográfica. O conteúdo, o simulador, o mapa de obras, a linguagem de
+financiamento e o cronograma de homologação devem considerar o município do cliente e
+a distribuidora responsável pelo atendimento. As regras gerais de micro e minigeração são
+nacionais, mas procedimentos de acesso, documentos, canais, normas técnicas, prazos
+operacionais e orientações de faturamento podem variar conforme a distribuidora e o
+contexto do projeto 7 8 . Na Bahia, a referência operacional local é a Neoenergia Coelba
+para as áreas sob sua concessão 7 .
+Por fim, foi mencionada a intenção de transformar a sede em uma usina própria, com
+placas no telhado, estoque e estrutura física. Esse ponto pode ser utilizado como narrativa
+de autoridade somente quando houver confirmação do estágio do projeto e imagens
+autorizadas. A versão inicial pode reservar o espaço com o título “Nossa sede e a energia
+que praticamos”, sem apresentar uma obra futura como se já estivesse concluída.
+   “O site tem que ser especializado para energia solar, para o povo da Bahia chegar lá e
+   encontrar coisas diferentes no site.” — síntese do áudio enviado.
+   “Não só: vou entrar em contato, quero um orçamento.” — síntese do áudio enviado.
+3. Diagnóstico do site atual
+O site atual já tem uma base visual consistente e uma jornada curta de conversão. O hero
+apresenta a promessa “Energia solar que cabe no seu bolso”, mostra fotos de instalações
+e oferece orçamento gratuito pelo WhatsApp. As seções de empresa, serviços, processo e
+contato também estão organizadas e são adequadas para preservar como base.
+O principal problema não é a ausência de conteúdo institucional. É a ausência de
+ferramentas e informações que diferenciem a empresa de uma landing page comum. A
+versão atual não apresenta simulador, financiamento, Banco do Nordeste, taxação, FAQ,
+catálogo de obras, depoimentos em escala, mapa de atuação ou cronograma visual
+detalhado.
+ Elemento atual                O que funciona                   O que deve mudar
+ Hero                          Promessa clara, fotos reais, CTA Acrescentar  simulador, foco
+                                                                Bahia e financiamento como
+                               para WhatsApp                    diferenciais
+                               Explica projeto, instalação e    Incluir presença regional,
+ Sobre a empresa               homologação                      experiência, processos e
+                                                                evidências verificáveis
+ Serviços                      Cobre residencial, comercial, Acrescentar     rural, usinas,
+                                                                financiamento e análise de
+                               manutenção e expansão            viabilidade
+                                                                Transformar em cronograma
+ Como funciona                 Quatro etapas compreensíveis visual     com marcos,
+                                                                documentos e
+                                                                responsabilidades
+                               Economia, garantia,              Usar somente números
+ Números                       valorização e emissões           comprovados e explicar que
+                                                                resultados variam por projeto
+ Contato                       WhatsApp, telefone, Instagram Criar    múltiplos CTAs
+                                                                contextualizados e
+                               e endereço                       formulário/simulador de lead
+ Identidade visual             Fundo escuro, tipografia clara e Modularizar  cores e
+                                                                componentes para futura
+                               acentos amarelo/laranja          mudança de marca
+
+A auditoria visual indicou que o site está com aparência escura e tecnológica, com acentos
+amarelos ou alaranjados, cartões de imagens e botões de alto contraste. Essa linguagem
+pode ser mantida no primeiro ciclo, desde que a nova arquitetura permita alterar
+rapidamente as variáveis de cor e logo.
+4. Posicionamento e mensagens principais
+Mensagem central recomendada
+   Energia solar feita para a realidade da Bahia.Simule sua economia, entenda cada
+   etapa da instalação e encontre o caminho de financiamento mais adequado para o seu
+   projeto.
+Essa formulação é mais diferenciadora do que repetir apenas “economize na conta de
+luz”. Ela comunica território, transparência e utilidade. O percentual de economia deve
+ser apresentado como estimativa condicionada ao consumo, tarifa, dimensionamento,
+irradiação, regras da distribuidora e características do imóvel.
+Requisito central: explicar a Bahia sem confundir regra nacional e
+procedimento local
+O site deve deixar claro que a Lei nº 14.300/2022, as resoluções da ANEEL e o Sistema de
+Compensação de Energia Elétrica formam a base regulatória nacional 8 9 . Isso não
+significa que todos os projetos terão a mesma experiência em qualquer estado. A análise de
+acesso, os formulários, a documentação, os padrões técnicos, os canais de atendimento e o
+fluxo de homologação precisam ser apresentados de acordo com a distribuidora que
+atende o endereço do projeto 7 8 .
+Para a primeira versão, a experiência deve assumir a Bahia como território principal. O
+simulador deve pedir município e endereço ou, no mínimo, município e estado. O resultado
+deve indicar que a estimativa será refinada conforme a distribuidora, a tarifa vigente, o
+grupo de tensão, o tipo de unidade consumidora e as regras aplicáveis ao projeto. Quando
+o visitante estiver fora da Bahia, o site deve informar que a análise seguirá a distribuidora
+local e não deve reaproveitar automaticamente o mesmo cronograma ou texto de
+homologação.
+A seção educativa sobre “taxação” deve evitar a ideia de uma porcentagem única válida
+para todos. Ela deve explicar, em linguagem simples, a diferença entre energia gerada,
+energia injetada, créditos, custo de disponibilidade, demanda contratada, modalidade
+tarifária e encargos aplicáveis. O conteúdo precisa informar sua data de atualização e
+passar por revisão técnica sempre que houver mudança regulatória ou de procedimento da
+distribuidora.
+Mensagens de apoio
+ Objetivo                                       Mensagem sugerida
+                                                “Da sede no Recôncavo para projetos em
+ Regionalidade                                  toda a Bahia onde temos operação e
+                                                capacidade de atendimento.”
+ Educação                                       “Antes de contratar, entenda como
+                                                funciona, quanto pode gerar e quais etapas
+                                           acontecem na sua obra.”
+                                           “Veja como o FNE Sol pode se encaixar no
+ Banco do Nordeste                         seu projeto e descubra quais documentos
+                                           serão necessários.”
+                                           “Projeto, instalação, homologação e pós-
+ Confiança                                 venda acompanhados por uma única
+                                           equipe.”
+ Prova social                              “Conheça obras reais por cidade, tipo de
+                                           projeto e etapa de atendimento.”
+                                           “Faça uma simulação inicial e receba uma
+ Conversão                                 orientação personalizada, sem
+                                           compromisso.”
+
+
+5. Arquitetura de informação recomendada
+A estrutura deve continuar funcionando como uma landing page longa, mas com
+navegação por âncoras e páginas de apoio indexáveis. O menu principal pode ser
+reorganizado da seguinte forma:
+ 1. Início — promessa, simulador, financiamento e prova inicial.
+ 2. Simule sua economia — cálculo orientativo e captura de lead.
+ 3. Financiamento — Banco do Nordeste em destaque e demais alternativas.
+ 4. Como funciona — etapas técnicas e cronograma de obra.
+ 5. Obras na Bahia — mapa, filtros, fotos, depoimentos e números validados.
+ 6. Aprenda — taxação, fundamentos, manutenção e guias.
+ 7. Sobre a Eleven Watt — empresa, sede, equipe, cobertura e diferenciais.
+ 8. Fale com a equipe — WhatsApp, telefone, formulário e dados de atendimento.
+A navegação deve exibir um CTA persistente de “Simular agora” e um CTA secundário de
+“Falar com especialista”. O WhatsApp continua sendo o canal de conversão principal,
+mas o simulador deve criar um primeiro passo menos invasivo para usuários que ainda
+estão pesquisando.
+6. Home page proposta
+6.1 Hero
+O hero deve apresentar simultaneamente a regionalidade e a utilidade do site. Recomenda-
+se um título sobre energia solar na Bahia, uma descrição objetiva e dois botões: “Calcular
+minha economia” e “Falar com especialista”.
+Ao lado do texto, pode ser mantido o mosaico de fotos reais do site atual, substituindo ou
+complementando uma das imagens por um cartão visual com a frase “Financiamento e
+orientação para o seu projeto”. O Banco do Nordeste deve aparecer como destaque logo
+abaixo do hero, mas sem transformar a primeira dobra em uma promessa de aprovação.
+6.2 Benefícios
+A grade de benefícios pode aproveitar a referência da H3 Solar, porém com textos próprios
+e verificáveis: redução de custos, previsibilidade do gasto energético, valorização potencial
+do imóvel, baixa manutenção, sustentabilidade e acompanhamento completo.
+“Instalação rápida” só deve ser utilizada com uma faixa de prazo condicionada ao projeto
+e à distribuidora.
+6.3 Simulador de economia
+A seção deve explicar que o resultado é uma estimativa inicial. Recomenda-se começar com
+poucos campos para não gerar abandono:
+ Campo                          Obrigatório na primeira etapa   Observação
+ Tipo de projeto                Sim                             Residencial, comercial, rural ou
+                                                                industrial
+                                                                Permite contextualizar
+ Município e estado             Sim                             atendimento e estimativa
+                                                                regional
+ Valor médio da conta de luz    Sim                             Melhor ponto de entrada para
+                                                                público leigo
+ Consumo em kWh                 Não                             Pode ser informado a partir da
+                                                                fatura
+ Tipo de imóvel                 Não                             Casa, comércio, indústria,
+                                                                propriedade rural ou outro
+ Nome e WhatsApp                Sim para receber o resultado    Deve haver aviso de finalidade
+                                                                e consentimento
+
+A saída pode apresentar faixa estimada de potência, número aproximado de módulos, área
+necessária, geração mensal, economia potencial, valor residual estimado da fatura, faixa de
+investimento e prazo aproximado de retorno. O resultado deve incluir uma nota de que o
+dimensionamento final depende da fatura, vistoria, projeto elétrico e análise técnica.
+O simulador deve permitir que o usuário escolha entre “Quero comprar”, “Quero
+financiar” e “Ainda estou pesquisando”. Essa informação ajuda a separar leads
+quentes, leads de conteúdo e pessoas que precisam primeiro de educação.
+6.4 Financiamento
+A área deve ser construída com linguagem comparativa e orientativa. O Banco do Nordeste
+ocupa o primeiro cartão, em tamanho maior, com o título “Destaque para o FNE Sol”. Os
+demais nomes aparecem em uma grade ou carrossel organizado, sem sugerir que todos
+são parceiros ativos da empresa.
+ Instituição ou marca   Categoria a exibir     Papel no site         Tratamento
+                                                                     recomendado
+                                                                     Página própria,
+ Banco do Nordeste      Banco e agente de      Destaque principal    explicação do FNE Sol,
+                        crédito regional                             checklist e CTA de
+                                                                     simulação/orientação
+                        Banco de                                     Explicar que
+                        desenvolvimento e                            condições dependem
+ BNDES                  linhas operadas por    Destaque secundário   da linha,
+                        agentes credenciados                         equipamento, agente
+                                                                     e análise
+                                                                     Exibir somente após
+ BTG Pactual            Banco                  Alternativa           confirmação de
+                                                                     produto, canal e
+                                                                     elegibilidade
+                                                                     Exibir somente após
+ Banco Santander        Banco                  Alternativa           confirmação de
+                                                                     produto, canal e
+                                                                     elegibilidade
+                                                                     Exibir somente após
+ Itaú                   Banco                  Alternativa           confirmação de
+                                                                     produto, canal e
+                                                                     elegibilidade
+                                                                     Exibir somente após
+ Caixa Econômica        Banco público          Alternativa           confirmação de
+ Federal                                                             produto, canal e
+                                                                     elegibilidade
+                                                                   Informar que
+ Sicoob                Sistema cooperativo    Alternativa          condições podem
+                                                                   variar por
+                                                                   cooperativa/agência
+                                                                   Informar que
+ Sicredi               Sistema cooperativo    Alternativa          condições podem
+                                                                   variar por
+                                                                   cooperativa/agência
+                                                                   Confirmar modalidade
+ BV                    Banco/financiamento    Alternativa          específica para
+                                                                   sistemas fotovoltaicos
+                                                                   Não apresentar como
+ Solfácil              Plataforma/financiame Alternativa           banco; descrever a
+                       nto especializado                           natureza correta do
+                                                                   serviço
+                                                                   Exibir somente após
+ Bradesco              Banco                  Alternativa          confirmação de
+                                                                   produto, canal e
+                                                                   elegibilidade
+                                                                   Exibir somente após
+ Banco do Brasil       Banco público          Alternativa          confirmação de
+                                                                   produto, canal e
+                                                                   elegibilidade
+
+
+6.5 Banco do Nordeste em maior evidência
+A página ou seção do Banco do Nordeste deve explicar o FNE Sol em linguagem simples.
+Segundo a página oficial consultada, o programa financia projetos de micro e minigeração
+distribuída de energia renovável e sistemas isolados, podendo incluir os componentes do
+sistema fotovoltaico e a instalação. A página informa públicos como empresas, produtores
+rurais e pessoas físicas, com condições diferentes por finalidade e perfil.
+O conteúdo deve apresentar o FNE Sol como possibilidade sujeita a cadastro, limite de
+crédito, documentação, garantias e análise. Não se deve usar “financiamento garantido”,
+“aprovação imediata” ou qualquer prazo e taxa como promessa comercial. A área pode
+conter os seguintes blocos:
+ • Para quem pode fazer sentido: pessoa física, empresa e produtor rural, conforme
+    enquadramento e análise.
+ • O que pode entrar no projeto: sistema, componentes e instalação, conforme a linha
+    aplicável.
+ • Como começar: simulação inicial, conferência da fatura, elaboração do projeto e
+    orientação sobre documentos.
+ • O que depende do banco: taxa, prazo, carência, garantias, limite, aprovação e agência
+    responsável.
+ • CTA: “Quero entender o FNE Sol para o meu projeto”.
+A página oficial também disponibiliza um simulador com valor do bem, valor solicitado,
+carência, número de prestações e dados de contato. O site da Eleven Watt pode
+encaminhar para orientação e captação de dados, mas não deve reproduzir a aparência de
+uma aprovação bancária nem solicitar dados sensíveis desnecessários.
+6.6 Como funciona e cronograma
+O processo deve ser mostrado como uma linha do tempo que responda a três perguntas: o
+que acontece, quem faz e o que o cliente precisa fornecer. A sequência recomendada é:
+ Etapa                                       Conteúdo para o cliente
+ 1. Diagnóstico                              Envio da conta, entendimento do consumo e
+                                             identificação do tipo de imóvel
+ 2. Proposta e contrato                      Escopo, equipamentos, investimento,
+                                             condições e responsabilidades
+ 3. Projeto técnico                          Dimensionamento, documentação e registro
+                                             de responsabilidade técnica quando aplicável
+ 4. Solicitação/compra dos equipamentos      Pedido, logística e conferência do kit
+ 5. Homologação                              Protocolo e análise junto à distribuidora local
+ 6. Entrega                                  Equipamentos disponíveis no local da obra
+ 7. Instalação                               Montagem dos módulos, inversor, estrutura e
+                                             conexões
+ 8. Vistoria e ativação                      Solicitação de vistoria, ajustes e liberação
+                                             conforme a distribuidora
+ 9. Pós-venda                                Orientação, monitoramento, manutenção e
+                                             suporte
+
+A imagem enviada mostra um exemplo real com contrato em 10/10, entrega do kit em
+28/10, instalação em 02/11 e solicitação de vistoria em 06/11. Ela deve inspirar o
+componente visual, mas as datas e os nomes técnicos precisam ser confirmados antes de
+publicação. A mensagem “menos de 1 mês” deve ser apresentada como exemplo de
+cronograma, nunca como garantia universal.
+6.7 Obras e prova social
+A empresa deve transformar o acervo de mais de 800 sistemas em uma biblioteca de
+projetos. Cada obra pode ter cidade, tipo de imóvel, potência instalada, quantidade de
+módulos, data, fotos autorizadas, desafio do projeto, resultado e depoimento. Nem todos
+os campos precisam aparecer na primeira versão, mas a estrutura deve permitir evolução.
+Recomenda-se uma página com filtros por região, tipo de projeto e porte. Na home,
+bastam três ou quatro casos reais, cada um com foto, cidade e uma frase de resultado.
+Depoimentos em vídeo devem ser priorizados quando houver autorização de imagem e
+áudio.
+O número de seguidores ou de sistemas não deve ser o único argumento. Prova social mais
+forte combina quantidade, localização, imagens reais, documentação visual e relato do
+cliente. As publicações do Instagram podem ser incorporadas como conteúdo
+complementar, mas o site deve continuar sendo a fonte organizada e pesquisável.
+6.8 Conteúdo educativo e FAQ
+A área Aprenda deve gerar valor para quem ainda não está pronto para comprar e ajudar o
+tráfego orgânico. Os primeiros conteúdos devem responder a dúvidas simples e regionais:
+ Tema                                        Pergunta que o conteúdo deve responder
+ Fundamentos                                 Como funciona um sistema fotovoltaico
+                                             conectado à rede?
+ Fatura                                      O que observar na conta de luz antes de pedir
+                                             um orçamento?
+                                             O que é regra nacional, o que depende da
+ Taxação na Bahia                            Neoenergia Coelba e como créditos, custo de
+                                             disponibilidade e faturamento aparecem na
+                                             conta?
+ Dimensionamento                             Por que dois imóveis com a mesma conta
+                                             podem precisar de sistemas diferentes?
+ Financiamento                               Como comparar uma linha de crédito sem
+                                             olhar apenas a parcela?
+ Obra                                        Quanto tempo leva cada etapa e o que pode
+                                             causar atraso?
+ Manutenção                                         O que precisa ser limpo, monitorado ou
+                                                    revisado?
+ Segurança                                          Quais cuidados elétricos e documentais
+                                                    devem ser exigidos?
+ Rural                                              Como avaliar energia solar para bomba,
+                                                    irrigação, galpão e propriedade rural?
+ Pós-venda                                          O que acontece depois da homologação?
+
+O FAQ deve usar perguntas que o cliente normalmente não sabe fazer. Cada resposta
+precisa ser curta, direta e ligada a um CTA contextual. Conteúdos regulatórios e tributários
+devem ser revisados antes da publicação e ter data de atualização visível.
+Cada página de cidade ou região deve informar a distribuidora considerada, a data da
+última revisão e o escopo do atendimento. A página não deve prometer prazo de
+aprovação, percentual de economia ou isenção de cobrança sem verificar o projeto
+específico. O site deve direcionar o visitante para a equipe quando houver dúvida sobre
+modalidade tarifária, enquadramento, documentação ou disponibilidade de conexão.
+7. Direção visual e experiência
+A identidade visual atual pode ser mantida no primeiro ciclo: fundo escuro, tipografia clara,
+amarelo/laranja para ação e imagens reais de obras. O objetivo é preservar
+reconhecimento enquanto se adicionam mais módulos de conteúdo.
+A implementação deve centralizar as decisões visuais em variáveis ou tokens: color-
+background , color-surface , color-primary , color-accent , color-text , color-muted , font-heading ,
+ font-body , radius-card e shadow-card . A logo, o nome e as cores não devem estar
+espalhados em regras isoladas.
+O destaque do Banco do Nordeste pode utilizar uma variação de cartão com borda ou selo
+de “prioridade regional”, sem alterar a marca oficial do banco. Logos de instituições
+financeiras devem ser usados somente com permissão e respeitando os manuais de marca.
+A interface deve ser mobile-first. O simulador precisa ser confortável em telas pequenas, o
+CTA de WhatsApp deve permanecer acessível sem cobrir campos e as tabelas de
+financiamento devem virar cartões ou rolagem horizontal em dispositivos móveis.
+8. Conversão, dados e tráfego orgânico
+A estratégia de tráfego deve combinar páginas indexáveis com CTAs de baixa fricção. Os
+principais eventos de análise devem ser: início do simulador, conclusão do simulador,
+clique no WhatsApp, clique em financiamento, abertura do FAQ, visualização de obra, envio
+de formulário e clique em telefone.
+O formulário deve solicitar apenas os dados necessários para o atendimento. Deve
+informar finalidade, canal de contato e consentimento. Dados de CPF, renda, documentos
+bancários ou informações de crédito não devem ser coletados no primeiro formulário do
+site; esses dados pertencem a um fluxo autorizado e seguro da instituição financeira.
+A estrutura de SEO deve privilegiar termos locais e de intenção, como “energia solar em
+Feira de Santana”, “energia solar no Recôncavo Baiano”, “financiamento de energia
+solar no Banco do Nordeste”, “FNE Sol”, “energia solar para empresa na Bahia” e
+“simulador de energia solar na Bahia”. Cada página deve ter título, descrição, H1, dados
+estruturados quando aplicável, imagens com texto alternativo e uma data de atualização
+para conteúdos regulatórios.
+O objetivo de “tráfego brutal” deve ser convertido em metas mensuráveis. A primeira
+versão pode acompanhar visitantes orgânicos, taxa de conclusão do simulador, leads por
+cidade, custo por lead, taxa de resposta no WhatsApp e conteúdo que gera mais contatos.
+Crescimento de seguidores deve ser consequência de conteúdo útil, não o único indicador
+de sucesso.
+9. Requisitos funcionais da primeira versão
+ Prioridade                    Requisito                    Critério de aceitação
+                                                            O visitante identifica Bahia,
+ Alta                          Hero regional com CTAs       simulação e contato na
+                                                            primeira dobra
+                                                            Usuário informa projeto,
+ Alta                          Simulador inicial            localização e conta e recebe
+                                                            estimativa com ressalvas
+                               Banco do Nordeste em         Existe seção específica do FNE
+ Alta                          destaque                     Sol com CTA e aviso de análise
+                                                            de crédito
+                               Grade de alternativas        Todos os nomes informados
+ Alta                          financeiras                  aparecem categorizados sem
+                                                            afirmações não confirmadas
+                                                            As etapas da obra estão
+ Alta                          Cronograma visual            explicadas em linguagem
+                                                            simples
+ Alta                          FAQ e taxação                Há conteúdo educativo, data
+                                                            de atualização e revisão
+                                                              técnica prevista
+                                                              Município, distribuidora, regras
+ Alta                           Camada regional Bahia         locais e materiais de
+                                                              homologação são identificados
+                                                              no fluxo
+                                                              Há pelo menos três obras ou
+ Alta                           Prova social                  depoimentos reais com
+                                                              autorização
+ Média                          Mapa de obras                 Usuário filtra ou consulta
+                                                              localidades atendidas
+                                                              Conteúdos indexáveis podem
+ Média                          Área Aprenda                  ser publicados sem alterar o
+                                                              código da home
+ Média                          Eventos analíticos            Cliques, etapas e conversões
+                                                              do simulador são mensuráveis
+ Média                          Tokens de identidade          Nome, logo e cores podem ser
+                                                              trocados de forma centralizada
+                                Integração automática com     Conteúdo pode ser
+ Baixa                          Instagram                     sincronizado depois, sem
+                                                              bloquear a primeira versão
+                                                              Pode ser considerada em uma
+ Baixa                          Área logada do cliente        fase futura para acompanhar a
+                                                              obra
+
+
+10. Roadmap de implementação
+Fase 1 — Fundamento e conversão
+Manter a identidade visual atual, reorganizar a home, inserir o simulador simples, adicionar
+o bloco do Banco do Nordeste, revisar os CTAs e publicar o cronograma de obra. Nesta fase,
+o objetivo é transformar o site atual em uma página que explique e capture leads.
+Fase 2 — Autoridade regional
+Publicar a biblioteca de obras, inserir mapa ou filtros por cidade, reunir depoimentos
+autorizados e criar a área Aprenda. Os números de 800 sistemas, municípios atendidos e
+resultados devem ser validados e transformados em prova visual.
+Fase 3 — Escala e personalização
+Adicionar cenários de financiamento, automações de distribuição de leads, integração com
+CRM, páginas específicas por cidade, acompanhamento de origem do tráfego e uma área
+de cliente para status da obra, se houver infraestrutura segura para isso.
+11. Pendências que precisam de validação antes da
+publicação
+1. Confirmar o nome definitivo da marca e se “Solar Eleven Watt” continuará como
+   nome provisório.
+2. Confirmar a sede, endereço público, telefone, Instagram e área operacional atual.
+3. Validar o número de sistemas instalados e a definição que será usada para esse
+   indicador.
+4. Listar as cidades em que a empresa pode atender atualmente, separando obras
+   históricas de cobertura comercial ativa.
+5. Confirmar quais bancos, cooperativas e plataformas têm parceria efetiva ou apenas são
+   alternativas de mercado.
+6. Obter autorização para uso de logos, fotos, vídeos, nomes e depoimentos de clientes.
+7. Conferir as etapas e datas do cronograma enviado, além do nome correto da
+   distribuidora, dos termos técnicos e dos procedimentos específicos da Bahia.
+8. Validar os percentuais de economia, garantia, valorização e retorno citados no site
+   atual.
+9. Definir o responsável técnico que revisará conteúdos sobre taxação, homologação,
+   dimensionamento e diferenças entre regra nacional e procedimento da Neoenergia
+   Coelba.
+10.Definir para onde os leads do simulador serão enviados e quem fará o primeiro
+   atendimento.
+12. Conclusão
+A melhor reestruturação não é simplesmente copiar a H3 Solar ou a EletroBidu. É combinar
+a base visual e a simplicidade de conversão já existentes com três diferenciais próprios:
+conhecimento regional da Bahia, orientação financeira com prioridade para o Banco
+do Nordeste e transparência sobre o processo completo da obra. O foco baiano precisa
+aparecer na primeira dobra, no simulador, nos conteúdos regulatórios e no fluxo de
+homologação; caso contrário, o principal diferencial pedido nos áudios ficará apenas no
+discurso institucional.
+O site deve responder, nesta ordem, às perguntas do visitante: “isso serve para a minha
+realidade?”, “quanto posso economizar?”, “como posso pagar?”, “quem já foi
+atendido?”, “o que acontece depois que eu contrato?” e “com quem eu falo?”. Se a
+primeira versão cumprir essa sequência, a marca atual poderá ser trocada no futuro sem
+perder a arquitetura, os dados ou a jornada de conversão.
+Referências
+[1] Site atual Solar Eleven Watt — Energia solar em Feira de Santana
+[2] H3 Solar — referência de estrutura, benefícios, bancos e cases
+[3] EletroBidu — referência de landing page e simulação de energia solar
+[4] Banco do Nordeste — FNE Sol
+[5] Banco do Nordeste — Simulador de financiamento de energia renovável
+[6] BNDES — Finame Baixo Carbono
+[7] Neoenergia Coelba — Geração Distribuída na Bahia
+[8] ANEEL — Micro e Minigeração Distribuída
+[9] Planalto — Lei nº 14.300/2022
+

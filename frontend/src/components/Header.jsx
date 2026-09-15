@@ -94,6 +94,19 @@ export default function Header() {
               </Link>
             ))}
           </div>
+          <Link
+            to="/portal"
+            className="nav-portal-link"
+            aria-label="Área do cliente"
+            title="Área do cliente"
+            onClick={() => setOpen(false)}
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span className="nav-portal-link-label">Área do cliente</span>
+          </Link>
           <a
             className="btn btn-primary nav-cta"
             href={whatsappLink('Olá! Gostaria de solicitar um orçamento de energia solar.')}

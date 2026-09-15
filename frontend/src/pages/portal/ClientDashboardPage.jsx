@@ -5,16 +5,107 @@ import RequireAuth from '../../components/RequireAuth'
 import { portalApi, clearToken } from '../../portalApi'
 import { PROJECT_STEPS } from '../../projectSteps'
 
+function ChangePasswordForm() {
+  const [currentPassword, setCurrentPassword] = useState('')
+  const [newPassword, setNewPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+  const [status, setStatus] = useState(null)
+  const [error, setError] = useState(null)
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setError(null)
+    setStatus(null)
+
+    if (newPassword !== confirmPassword) {
+      setError('A confirmação não bate com a nova senha.')
+      return
+    }
+
+    setLoading(true)
+    try {
+      await portalApi.changePassword(currentPassword, newPassword)
+      setStatus('Senha alterada com sucesso.')
+      setCurrentPassword('')
+      setNewPassword('')
+      setConfirmPassword('')
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <details className="portal-password">
+      <summary>Trocar senha</summary>
+      <form onSubmit={handleSubmit} className="simulator-form">
+        <div className="form-field">
+          <label htmlFor="current-password">Senha atual</label>
+          <input
+            id="current-password"
+            type="password"
+            required
+            value={currentPassword}
+            onChange={(e) => setCurrentPassword(e.target.value)}
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="new-password">Nova senha</label>
+          <input
+            id="new-password"
+            type="password"
+            required
+            minLength={8}
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="confirm-password">Confirmar nova senha</label>
+          <input
+            id="confirm-password"
+            type="password"
+            required
+            minLength={8}
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+        </div>
+
+        {error && <p className="portal-error">{error}</p>}
+        {status && <p className="portal-success">{status}</p>}
+
+        <button type="submit" className="btn btn-ghost" disabled={loading}>
+          {loading ? 'Salvando...' : 'Salvar nova senha'}
+        </button>
+      </form>
+    </details>
+  )
+}
+
 function ClientDashboard({ me }) {
   const navigate = useNavigate()
   const [projects, setProjects] = useState(null)
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    portalApi
-      .myProjects()
-      .then(setProjects)
-      .catch((err) => setError(err.message))
+    const load = () => portalApi.myProjects().then(setProjects).catch((err) => setError(err.message))
+    load()
+
+    // Reconsulta ao voltar pra aba e periodicamente, pra refletir uma etapa
+    // que a equipe tenha avançado no painel admin enquanto essa tela estava aberta.
+    const onVisibility = () => {
+      if (document.visibilityState === 'visible') load()
+    }
+    document.addEventListener('visibilitychange', onVisibility)
+    const interval = setInterval(load, 30000)
+
+    return () => {
+      document.removeEventListener('visibilitychange', onVisibility)
+      clearInterval(interval)
+    }
   }, [])
 
   const handleLogout = () => {
@@ -79,6 +170,8 @@ function ClientDashboard({ me }) {
           })}
         </div>
       )}
+
+      <ChangePasswordForm />
     </section>
   )
 }

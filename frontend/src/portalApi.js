@@ -1,16 +1,19 @@
 const API_URL = import.meta.env.VITE_PORTAL_API_URL
 const TOKEN_KEY = 'solarwatt_portal_token'
 
+// sessionStorage (não localStorage) de propósito: cada aba mantém sua
+// própria sessão, então logar como admin numa aba não sobrescreve o login
+// do cliente aberto em outra aba do mesmo navegador.
 export function getToken() {
-  return localStorage.getItem(TOKEN_KEY)
+  return sessionStorage.getItem(TOKEN_KEY)
 }
 
 export function setToken(token) {
-  localStorage.setItem(TOKEN_KEY, token)
+  sessionStorage.setItem(TOKEN_KEY, token)
 }
 
 export function clearToken() {
-  localStorage.removeItem(TOKEN_KEY)
+  sessionStorage.removeItem(TOKEN_KEY)
 }
 
 async function request(path, { method = 'GET', body, auth = true } = {}) {
@@ -43,6 +46,8 @@ export const portalApi = {
   login: (email, password) => request('/api/auth/login', { method: 'POST', body: { email, password }, auth: false }),
   me: () => request('/api/me'),
   myProjects: () => request('/api/me/projects'),
+  changePassword: (currentPassword, newPassword) =>
+    request('/api/me/password', { method: 'PATCH', body: { currentPassword, newPassword } }),
   adminListClients: () => request('/api/admin/clients'),
   adminCreateClient: (payload) => request('/api/admin/clients', { method: 'POST', body: payload }),
   adminUpdateProjectStep: (projectId, currentStep) =>

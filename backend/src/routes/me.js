@@ -1,4 +1,5 @@
 import { Router } from 'express'
+import bcrypt from 'bcryptjs'
 import { pool } from '../db/pool.js'
 import { requireAuth } from '../auth.js'
 import { asyncHandler } from '../asyncHandler.js'
@@ -23,6 +24,35 @@ meRouter.get(
       phone: client.phone,
       isAdmin: client.is_admin,
     })
+  }),
+)
+
+meRouter.patch(
+  '/password',
+  asyncHandler(async (req, res) => {
+    const { currentPassword, newPassword } = req.body || {}
+    if (!currentPassword || !newPassword) {
+      return res.status(400).json({ error: 'Informe a senha atual e a nova senha.' })
+    }
+    if (String(newPassword).length < 8) {
+      return res.status(400).json({ error: 'A nova senha precisa ter pelo menos 8 caracteres.' })
+    }
+
+    const { rows } = await pool.query('SELECT password_hash FROM clients WHERE id = $1', [
+      req.auth.sub,
+    ])
+    const client = rows[0]
+    if (!client) return res.status(404).json({ error: 'Cliente não encontrado.' })
+
+    const ok = await bcrypt.compare(currentPassword, client.password_hash)
+    if (!ok) return res.status(401).json({ error: 'Senha atual incorreta.' })
+
+    const passwordHash = await bcrypt.hash(newPassword, 10)
+    await pool.query('UPDATE clients SET password_hash = $1 WHERE id = $2', [
+      passwordHash,
+      req.auth.sub,
+    ])
+    res.json({ ok: true })
   }),
 )
 
